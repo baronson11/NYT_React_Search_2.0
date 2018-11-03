@@ -1,11 +1,11 @@
+// Dependencies --------------------------------------
 const axios = require("axios");
 const db = require("../models");
 
-// Defining methods for the nytController
-
+// NYT Controller ------------------------------------
 // findAll searches the NYT API and returns only the entries we haven't already saved
 module.exports = {
-  findAll: function(req, res) {
+  findAll: (req, res) => {
     const params = Object.assign(
       { api_key: "2e0b1078b6234bc2b219ee5e793572d6" },
       req.query

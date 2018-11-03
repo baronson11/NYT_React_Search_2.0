@@ -1,13 +1,15 @@
+// Dependencies -----------------------------------
 const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
 
-// API Routes
+// API Routes -------------------------------------
 router.use("/api", apiRoutes);
 
-// If no API routes are hit, send the React app
+// Use React App if no API routes in use ----------
 router.use((req, res) =>
   res.sendFile(path.join(__dirname, "../client/build/index.html"))
 );
 
+// Exports ----------------------------------------
 module.exports = router;

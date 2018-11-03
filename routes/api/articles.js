@@ -1,5 +1,8 @@
+// Dependencies --------------------------------------
 const router = require("express").Router();
 const articleController = require("../../controllers/articleController");
+
+// Router --------------------------------------------
 
 // Matches with "/api/articles"
 router.route("/")
@@ -13,4 +16,5 @@ router
   .put(articleController.update)
   .delete(articleController.remove);
 
+// Exports -------------------------------------------
 module.exports = router;
